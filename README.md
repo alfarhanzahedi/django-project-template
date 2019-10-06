@@ -1,4 +1,5 @@
 # django-project-template
+[![GitHub](https://img.shields.io/github/license/alfarhanzahedi/django-project-template?color=orange)](https://github.com/alfarhanzahedi/django-project-template/blob/master/LICENSE) [![Maintenance](https://img.shields.io/maintenance/yes/2019)](https://github.com/alfarhanzahedi/django-project-template/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/alfarhanzahedi/django-project-template?color=blue)](https://github.com/alfarhanzahedi/django-project-template/commits/master)
 
 django-project-template is a simple project template for Django based projects. 
 PRs for adding new features or any bug fixes are always welcome :smile:.
@@ -68,14 +69,3 @@ $ heroku run python manage.py createsuperuser (optional)
 Also, do not forget to set the project environment variables (under `env`). They can added via the web interface under the project's settings tab (Config Vars). They can also be added via `heroku-cli` also. Instructions can be found [here](https://devcenter.heroku.com/articles/config-vars).  
 
 You should have a Heroku account (if not, create one [here](https://heroku.com/)), and Heroku CLI installed for the commands to work (if not, installation instructions can be found [here](https://devcenter.heroku.com/articles/heroku-cli)).
-
-## License
-The MIT License
-
-Copyright (c) 2019 Alfarhan Zahedi
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
