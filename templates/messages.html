@@ -1,0 +1,22 @@
+{% comment %}
+
+    This template acts as the template for Django messages 
+    (https://docs.djangoproject.com/en/dev/ref/contrib/messages/).
+    It is included in 'base.html'. 
+    You can include it anywhere and in any template where you want to display the messages.
+    
+    Note that this template uses Bootstrap classes and will need to be modified if you 
+    intend to use any other library.
+
+{% endcomment %}
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert {{ message.tags }} alert-dismissible fade show font-open-sans" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endfor %}
+{% endif %}

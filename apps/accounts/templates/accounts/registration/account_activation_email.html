@@ -1,0 +1,42 @@
+{% comment %}
+
+    This template acts as the 'Account Activation Email' page for the website.
+    It contains the link to activate one's account after successfully signing up.
+    Note that it has been kept bare minimum as the template is project dependent. 
+
+{% endcomment %}
+
+{% autoescape off %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            <h3>Hey {{ user.firstname }}, </h3>
+            Someone (hopefully you) signed up at {{ project_name }} using this email-id.<br>
+            Please click (or copy-paste into your web browser) the URL below to confirm your email-id and activate your
+            account.
+        </p>
+        <br>
+        <p>
+            <a href="http://{{ domain }}{% url 'activate' uidb64=uid token=token %}">
+                <u>http://{{ domain }}{% url 'activate' uidb64=uid token=token %}</u>
+            </a>
+        </p>
+        <br>
+        <p>
+            Best,<br>
+            The (insert website name here) Team 😎 <br>
+        </p>
+    </div>
+</body>
+
+</html>
+{% endautoescape %}
