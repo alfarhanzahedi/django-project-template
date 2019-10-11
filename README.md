@@ -1,5 +1,6 @@
-# django-project-template
 [![GitHub](https://img.shields.io/github/license/alfarhanzahedi/django-project-template?color=orange)](https://github.com/alfarhanzahedi/django-project-template/blob/master/LICENSE) [![Maintenance](https://img.shields.io/maintenance/yes/2019)](https://github.com/alfarhanzahedi/django-project-template/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/alfarhanzahedi/django-project-template?color=blue)](https://github.com/alfarhanzahedi/django-project-template/commits/master)
+
+# django-project-template
 
 django-project-template is a simple project template for Django based projects. 
 PRs for adding new features or any bug fixes are always welcome :smile:.
