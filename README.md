@@ -5,11 +5,24 @@
 django-project-template is a simple project template for Django based projects. 
 PRs for adding new features or any bug fixes are always welcome :smile:.
 
+There are two branches in this repository:
+- `master`
+- `master-extended`
+
+Features and usage instructions correspoding to both the branches can be found below.
+
 ## Features
+<<<<<<< HEAD
 - For Django 2.2
 - Works with Python 3.6
 - Comes with custom user model ready to go
 - Pre-built `accounts` app to handle new user sign up via an account activation email.
+=======
+### For `master` branch
+- For Django 2+
+- Works with Python 3.6+
+- Comes with custom user model ready to go
+>>>>>>> d31fa7a... Update README
 - [12-Factor](https://12factor.net/) based settings via `python-decouple`
 - `Procfile` for deploying to Heroku 
 
@@ -17,8 +30,12 @@ The template structure (only including important stuff) is as follows:
 ```
 ├── apps                           <- contains all the apps for the project. New apps should be added to this particular package only.
 │   ├── __init__.py
+<<<<<<< HEAD
 │   ├── accounts                   <- 'accounts' app to handler new user registration and authentication, along with a custom user model.
 │   ├── pages                      <- 'pages' app to host all the static/general web pages such as the 'landing' page or the 'about' page.
+=======
+│   └── accounts/                  <- 'accounts' app with a custom user model.
+>>>>>>> d31fa7a... Update README
 ├── manage.py
 ├── Procfile                       <- Procfile for Heroku.
 ├── project_name
@@ -33,6 +50,7 @@ The template structure (only including important stuff) is as follows:
 ├── README.md
 ├── requirements.txt
 ├── runtime.txt
+<<<<<<< HEAD
 ├── static                         <- static files that are to be used throughout the project.
 │   ├── css
 │   ├── img
@@ -41,6 +59,52 @@ The template structure (only including important stuff) is as follows:
     ├── base.html                  <- the base template for the project. To be inherited and overridden by every other template of the project. 
 ```
 ## How to Install
+=======
+├── static/                        <- static files that are to be used throughout the project.
+│   ├── css/
+│   ├── img/
+│   └── js/
+└── templates/                     <- templates to be used throughout the project.
+```
+
+### For `master-extended` branch
+- For Django 2+
+- Works with Python 3.6+
+- Comes with custom user model ready to go
+- Pre-built accounts app to handle new user sign up via an account activation email.
+- [12-Factor](https://12factor.net/) based settings via `python-decouple`
+- `Procfile` for deploying to Heroku 
+
+The template structure (only including important stuff) is as follows:
+```
+├── apps/                          <- contains all the apps for the project. New apps should be added to this particular package only.
+│   ├── __init__.py
+│   ├── accounts/                  <- 'accounts' app to handle new user registration and authentication along with a custom user model.
+│   └── pages/                     <- 'pages' app to host all the static/general web pages such as the 'landing' page or the 'about' page.
+├── manage.py
+├── Procfile                       <- Procfile for Heroku.
+├── project_name
+│   ├── __init__.py
+│   ├── settings                   <- settings package for the project.
+│   │   ├── __init__.py
+│   │   ├── base.py                <- settings common to both development and production.            
+│   │   ├── development.py         <- settings unique to development.
+│   │   └── production.py          <- settings unique to production.
+│   ├── urls.py
+│   └── wsgi.py
+├── README.md
+├── requirements.txt
+├── runtime.txt
+├── static/                        <- static files that are to be used throughout the project.
+│   ├── css/
+│   ├── img/
+│   └── js/
+└── templates/                     <- templates to be used throughout the project.
+    └── base.html                  <- the base template for the project. To be inherited and overridden by every other template of the project. 
+```
+## How to Install
+### For `master` branch
+>>>>>>> d31fa7a... Update README
 ```bash
 $ django-admin.py startproject \
   --template=https://github.com/alfarhanzahedi/django-project-template/archive/master.zip \
@@ -51,6 +115,21 @@ $ cd project_name
 $ pip install -r requirements.txt
 $ python manage.py runserver
 ```
+<<<<<<< HEAD
+=======
+### For `master-extended` branch 
+```bash
+$ django-admin.py startproject \
+  --template=https://github.com/alfarhanzahedi/django-project-template/archive/master-extended.zip \
+  --name=Procfile \
+  --extension=py \
+  project_name
+$ cd project_name
+$ pip install -r requirements.txt
+$ python manage.py runserver
+```
+
+>>>>>>> d31fa7a... Update README
 It is considered good practice to run the above commands in a new and separate virtual environment. Read more about virtual environments [here](https://realpython.com/python-virtual-environments-a-primer/).
 
 ## Environment Variables
