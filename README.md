@@ -6,19 +6,19 @@ django-project-template is a simple project template for Django based projects.
 PRs for adding new features or any bug fixes are always welcome :smile:.
 
 ## Features
-- For Django 2.2
-- Works with Python 3.6
+- For Django 2+
+- Works with Python 3.6+
 - Comes with custom user model ready to go
-- Pre-built `accounts` app to handle new user sign up via an account activation email.
+- Pre-built `accounts` app to handle new user sign up via an account activation email (available only in template corresponding to branch - `master-extended`).
 - [12-Factor](https://12factor.net/) based settings via `python-decouple`
 - `Procfile` for deploying to Heroku 
 
 The template structure (only including important stuff) is as follows:
 ```
-├── apps                           <- contains all the apps for the project. New apps should be added to this particular package only.
+├── apps/                          <- contains all the apps for the project. New apps should be added to this particular package only.
 │   ├── __init__.py
-│   ├── accounts                   <- 'accounts' app to handler new user registration and authentication, along with a custom user model.
-│   ├── pages                      <- 'pages' app to host all the static/general web pages such as the 'landing' page or the 'about' page.
+│   ├── accounts/                  <- 'accounts' app to handler new user registration and authentication (available only in template correpsonding to branch - master-extended), along with a custom user model.
+│   └── pages/                     <- 'pages' app to host all the static/general web pages such as the 'landing' page or the 'about' page (available only in template correpsonding to branch - master-extended).
 ├── manage.py
 ├── Procfile                       <- Procfile for Heroku.
 ├── project_name
@@ -27,20 +27,21 @@ The template structure (only including important stuff) is as follows:
 │   │   ├── __init__.py
 │   │   ├── base.py                <- settings common to both development and production.            
 │   │   ├── development.py         <- settings unique to development.
-│   │   ├── production.py          <- settings unique to production.
+│   │   └── production.py          <- settings unique to production.
 │   ├── urls.py
 │   └── wsgi.py
 ├── README.md
 ├── requirements.txt
 ├── runtime.txt
-├── static                         <- static files that are to be used throughout the project.
+├── static/                        <- static files that are to be used throughout the project.
 │   ├── css
 │   ├── img
 │   └── js
-└── templates                      <- templates to be used throughout the project.
-    ├── base.html                  <- the base template for the project. To be inherited and overridden by every other template of the project. 
+└── templates/                     <- templates to be used throughout the project.
+    └── base.html                  <- the base template for the project. To be inherited and overridden by every other template of the project. 
 ```
 ## How to Install
+If you do no want to include extended features such as the `pages` app or the view classes to handle user signup and account activation via email verification, use the `master` branch - 
 ```bash
 $ django-admin.py startproject \
   --template=https://github.com/alfarhanzahedi/django-project-template/archive/master.zip \
@@ -51,6 +52,18 @@ $ cd project_name
 $ pip install -r requirements.txt
 $ python manage.py runserver
 ```
+else, use the `master-extended` branch - 
+```bash
+$ django-admin.py startproject \
+  --template=https://github.com/alfarhanzahedi/django-project-template/archive/master-extended.zip \
+  --name=Procfile \
+  --extension=py \
+  project_name
+$ cd project_name
+$ pip install -r requirements.txt
+$ python manage.py runserver
+```
+
 It is considered good practice to run the above commands in a new and separate virtual environment. Read more about virtual environments [here](https://realpython.com/python-virtual-environments-a-primer/).
 
 ## Environment Variables
